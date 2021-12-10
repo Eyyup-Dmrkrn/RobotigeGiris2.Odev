@@ -78,7 +78,7 @@ class turtle():
 
         while True:            
             if self.pose.x > self.FRAME_LOW_BORDER and self.pose.x < self.FRAME_HIGH_BORDER  and self.pose.y > self.FRAME_LOW_BORDER and self.pose.y < self.FRAME_HIGH_BORDER:
-                    self.vel_msg.linear.x = self.MAX_VEL / 4
+                    self.vel_msg.linear.x = self.MAX_VEL  # Çok hızlı gideceğinden değiştirilebilir.
                     self.velocity_publisher.publish(self.vel_msg) 
             else:                 
                 self.wallErrorControl(self.vel_msg)    
